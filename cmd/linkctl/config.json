@@ -1,0 +1,11 @@
+{
+ "namespace": "kosmos-system",
+ "imageRepository": "ghcr.io/kosmos-io",
+ "version": "0.2.0",
+ "protocol": "tcp",
+ "podWaitTime": 30,
+ "port": "8889",
+ "maxNum": 3,
+ "autoClean": true,
+ "cmdTimeout": 3
+}

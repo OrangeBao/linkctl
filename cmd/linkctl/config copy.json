@@ -1,0 +1,12 @@
+{
+    "namespace": "kosmos-system",
+    "imageRepository": "nexus.cmss.com:8086/kosmos-io",
+    "dstImageRepository": "nexus.cmss.com:8086/kosmos-io",
+    "version": "0.2.0",
+    "protocol": "tcp",
+    "podWaitTime": 30,
+    "port": "8889",
+    "srcKubeConfig": "/home/iron-man/share/github/linkctl/kube-config/cluster-84",
+    "maxNum": 3,
+    "cmdTimeout": 10
+}
