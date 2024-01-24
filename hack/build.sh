@@ -48,7 +48,7 @@ function build_binary_for_platform() {
   local target_pkg="${KOSMOS_GO_PACKAGE}/$(util::get_target_source "$target")"
   set -x
   CGO_ENABLED=0 GOOS=${os} GOARCH=${arch} go build \
-      -ldflags "${LDFLAGS:-}" \
+      -ldflags "${LDFLAGS:-} -s -w" \
       -o "_output/bin/${platform}/$target" \
       "${target_pkg}"
   set +x

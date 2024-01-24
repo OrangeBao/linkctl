@@ -2,7 +2,7 @@
     "namespace": "kosmos-system",
     "imageRepository": "nexus.cmss.com:8086/kosmos-io",
     "dstImageRepository": "nexus.cmss.com:8086/kosmos-io",
-    "version": "0.2.0",
+    "version": "0.2.1",
     "protocol": "tcp",
     "podWaitTime": 30,
     "port": "8889",

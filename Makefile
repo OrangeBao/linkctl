@@ -9,15 +9,7 @@ REGISTRY_PASSWORD?=""
 REGISTRY_SERVER_ADDRESS?=""
 KIND_IMAGE_TAG?="v1.25.3"
 
-TARGETS :=  clusterlink-controller-manager  \
-			kosmos-operator \
-			clusterlink-agent \
-            clusterlink-elector \
-			clusterlink-floater \
-			clusterlink-network-manager \
-			clusterlink-proxy \
-			clustertree-cluster-manager \
-			scheduler \
+TARGETS :=  clusterlink-floater \
 
 CTL_TARGETS := linkctl
 

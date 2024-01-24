@@ -13,15 +13,7 @@ KOSMOS_GO_PACKAGE="github.com/kosmos.io/linkctl"
 MIN_Go_VERSION=go1.19.0
 
 CLUSTERLINK_TARGET_SOURCE=(
-  scheduler=cmd/scheduler
-  clusterlink-proxy=cmd/clusterlink/proxy
-  kosmos-operator=cmd/operator
-  clusterlink-elector=cmd/clusterlink/elector
-  clusterlink-agent=cmd/clusterlink/agent
-  clusterlink-floater=cmd/clusterlink/floater
-  clusterlink-network-manager=cmd/clusterlink/network-manager
-  clusterlink-controller-manager=cmd/clusterlink/controller-manager
-  clustertree-cluster-manager=cmd/clustertree/cluster-manager
+  clusterlink-floater=cmd/floater
   linkctl=cmd/linkctl
 )
 
@@ -451,10 +443,10 @@ function util::version_ldflags() {
     GIT_TREESTATE="dirty"
   fi
   BUILDDATE=$(date -u +'%Y-%m-%dT%H:%M:%SZ')
-  LDFLAGS="-X github.com/kosmos.io/kosmos/pkg/version.gitVersion=${GIT_VERSION} \
-                        -X github.com/kosmos.io/kosmos/pkg/version.gitCommit=${GIT_COMMIT_HASH} \
-                        -X github.com/kosmos.io/kosmos/pkg/version.gitTreeState=${GIT_TREESTATE} \
-                        -X github.com/kosmos.io/kosmos/pkg/version.buildDate=${BUILDDATE}"
+  LDFLAGS="-X github.com/kosmos.io/linkctl/pkg/version.gitVersion=${GIT_VERSION} \
+                        -X github.com/kosmos.io/linkctl/pkg/version.gitCommit=${GIT_COMMIT_HASH} \
+                        -X github.com/kosmos.io/linkctl/pkg/version.gitTreeState=${GIT_TREESTATE} \
+                        -X github.com/kosmos.io/linkctl/pkg/version.buildDate=${BUILDDATE}"
   echo $LDFLAGS
 }
 
